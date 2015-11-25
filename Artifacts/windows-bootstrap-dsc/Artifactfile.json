@@ -54,8 +54,8 @@
             "description": "DSC agent (LCM) refresh frequency setting, in minutes"
         },
         "rebootNodeIfNeeded": {
-            "type": "bool",
-            "defaultValue": true,
+            "type": "string",
+            "defaultValue": "true",
             "description": "DSC agent (LCM) rebootNodeIfNeeded setting"
         },
         "actionAfterReboot": {
@@ -68,8 +68,8 @@
             "description": "DSC agent (LCM) actionAfterReboot setting. ContinueConfiguration or StopConfiguration"
         },
         "allowModuleOverwrite": {
-            "type": "bool",
-            "defaultValue": false,
+            "type": "string",
+            "defaultValue": "false",
             "description": "DSC agent (LCM) allowModuleOverwrite setting"
         }
     },
