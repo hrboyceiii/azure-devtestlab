@@ -104,7 +104,33 @@
                     "Name": "NodeConfigurationName",
                     "Value": "[parameters('nodeConfigurationName')]",
                     "TypeName": "System.String"
+                },
+                {
+                    "Name": "ConfigurationModeFrequencyMins",
+                    "Value": 15,
+                    "TypeName": "System.Int32"
+                },
+                {
+                    "Name": "RefreshFrequencyMins",
+                    "Value": 30,
+                    "TypeName": "System.Int32"
+                },
+                {
+                    "Name": "RebootNodeIfNeeded",
+                    "Value": true,
+                    "TypeName": "System.Boolean"
+                },
+                {
+                    "Name": "ActionAfterReboot",
+                    "Value": "ContinueConfiguration",
+                    "TypeName": "System.String"
+                },
+                {
+                    "Name": "AllowModuleOverwrite",
+                    "Value": true,
+                    "TypeName": "System.Boolean"
                 }
+
             ]
         }
     }
