@@ -104,37 +104,7 @@
                     "Name": "NodeConfigurationName",
                     "Value": "[parameters('nodeConfigurationName')]",
                     "TypeName": "System.String"
-                }/*,
-                {
-                    "Name": "ConfigurationMode",
-                    "Value": "[parameters('configurationMode')]",
-                    "TypeName": "System.String"
-                },
-                {
-                    "Name": "ConfigurationModeFrequencyMins",
-                    "Value": "[parameters('configurationModeFrequencyMins')]",
-                    "TypeName": "System.Int32"
-                },
-                {
-                    "Name": "RefreshFrequencyMins",
-                    "Value": "[parameters('refreshFrequencyMins')]",
-                    "TypeName": "System.Int32"
-                },
-                {
-                    "Name": "RebootNodeIfNeeded",
-                    "Value": "[parameters('rebootNodeIfNeeded')]",
-                    "TypeName": "System.Boolean"
-                },
-                {
-                    "Name": "ActionAfterReboot",
-                    "Value": "[parameters('actionAfterReboot')]",
-                    "TypeName": "System.String"
-                },
-                {
-                    "Name": "AllowModuleOverwrite",
-                    "Value": "[parameters('allowModuleOverwrite')]",
-                    "TypeName": "System.Boolean"
-                }*/
+                }
             ]
         }
     }
