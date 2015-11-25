@@ -32,7 +32,7 @@
         "nodeConfigurationName": {
             "type": "string",
             "description": "The name of the node configuration, on the Azure Automation DSC pull server, that this node will be configured as"
-        }/*,
+        },
         "configurationMode": {
             "type": "string",
             "defaultValue": "ApplyAndMonitor",
@@ -71,12 +71,12 @@
             "type": "bool",
             "defaultValue": false,
             "description": "DSC agent (LCM) allowModuleOverwrite setting"
-        }*/
+        }
     },
     "runAzureVMExtension": {
         "publisher": "Microsoft.Powershell",
         "type": "DSC",
-        "typeHandlerVersion": "2.8",
+        "typeHandlerVersion": "2.9",
         "protectedSettings": {
             "Items": {
                 "registrationKeyPrivate": "[parameters('registrationKey')]"
@@ -112,22 +112,22 @@
                 },
                 {
                     "Name": "RefreshFrequencyMins",
-                    "Value": 30,
+                    "Value": "[parameters('refreshFrequencyMins')]",
                     "TypeName": "System.Int32"
                 },
                 {
                     "Name": "RebootNodeIfNeeded",
-                    "Value": true,
+                    "Value": "[parameters('rebootNodeIfNeeded')]",
                     "TypeName": "System.Boolean"
                 },
                 {
                     "Name": "ActionAfterReboot",
-                    "Value": "ContinueConfiguration",
+                    "Value": "[parameters('actionAfterReboot')]",
                     "TypeName": "System.String"
                 },
                 {
                     "Name": "AllowModuleOverwrite",
-                    "Value": true,
+                    "Value": "[parameters('allowModuleOverwrite')]",
                     "TypeName": "System.Boolean"
                 }
 
