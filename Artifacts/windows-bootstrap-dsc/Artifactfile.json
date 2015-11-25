@@ -32,7 +32,7 @@
         "nodeConfigurationName": {
             "type": "string",
             "description": "The name of the node configuration, on the Azure Automation DSC pull server, that this node will be configured as"
-        },
+        }/*,
         "configurationMode": {
             "type": "string",
             "defaultValue": "ApplyAndMonitor",
@@ -71,7 +71,7 @@
             "type": "bool",
             "defaultValue": false,
             "description": "DSC agent (LCM) allowModuleOverwrite setting"
-        }
+        }*/
     },
     "runAzureVMExtension": {
         "publisher": "Microsoft.Powershell",
@@ -104,7 +104,7 @@
                     "Name": "NodeConfigurationName",
                     "Value": "[parameters('nodeConfigurationName')]",
                     "TypeName": "System.String"
-                },
+                }/*,
                 {
                     "Name": "ConfigurationMode",
                     "Value": "[parameters('configurationMode')]",
@@ -134,7 +134,7 @@
                     "Name": "AllowModuleOverwrite",
                     "Value": "[parameters('allowModuleOverwrite')]",
                     "TypeName": "System.Boolean"
-                }
+                }*/
             ]
         }
     }
