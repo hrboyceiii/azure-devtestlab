@@ -1,0 +1,79 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+        {
+            "apiVersion": "2015-05-21-preview",
+            "name": "dsc05",
+            "type": "Microsoft.DevTestLab/environments",
+            "location": "East US 2",
+            "properties": {
+                "labId": "/subscriptions/85f9e162-a01e-478e-83ea-e663f1fe715d/resourceGroups/labrg/providers/Microsoft.DevTestLab/labs/hrb-lab01",
+                "provisioningState": null,
+                "notes": "",
+                "vms": [
+                    {
+                        "name": "dsc05",
+                        "vmTemplateName": "Windows Server 2012 R2 Datacenter",
+                        "size": "Basic_A3",
+                        "userName": "hrboyceiii",
+                        "password": "Password#1",
+                        "sshKey": null,
+                        "isAuthenticationWithSshKey": false,
+                        "artifacts": [
+                            {
+                                "artifactId": "/subscriptions/85f9e162-a01e-478e-83ea-e663f1fe715d/resourceGroups/labrg/providers/Microsoft.DevTestLab/labs/hrb-lab01/artifactSources/Private%20Repo/artifacts/windows-bootstrap-dsc",
+                                "parameters": [
+                                    {
+                                        "name": "modulesUrl",
+                                        "value": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-azure-automation-pullserver/UpdateLCMforAAPull.zip"
+                                    },
+                                    {
+                                        "name": "configurationFunction",
+                                        "value": "UpdateLCMforAAPull.ps1\\ConfigureLCMforAAPull"
+                                    },
+                                    {
+                                        "name": "registrationKey",
+                                        "value": "YpMb/0WeKI+osTXKA7QIC6UbJ+cL9cc0lkmhP9yqWWWpyFXTrnZ2ZbpuZyRI4CsI06j5Ttsy0k6dtdtZCTBEqg=="
+                                    },
+                                    {
+                                        "name": "registrationUrl",
+                                        "value": "https://eus2-agentservice-prod-1.azure-automation.net/accounts/ad6814e4-ff82-4f69-af51-42022aa61b20"
+                                    },
+                                    {
+                                        "name": "nodeConfigurationName",
+                                        "value": "SimpleConfiguration.localhost"
+                                    },
+                                    {
+                                        "name": "configurationMode",
+                                        "value": "ApplyAndMonitor"
+                                    },
+                                    {
+                                        "name": "configurationModeFrequencyMins",
+                                        "value": 15
+                                    },
+                                    {
+                                        "name": "refreshFrequencyMins",
+                                        "value": "30"
+                                    },
+                                    {
+                                        "name": "rebootNodeIfNeeded",
+                                        "value": "true"
+                                    },
+                                    {
+                                        "name": "actionAfterReboot",
+                                        "value": "ContinueConfiguration"
+                                    },
+                                    {
+                                        "name": "allowModuleOverwrite",
+                                        "value": "true"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
