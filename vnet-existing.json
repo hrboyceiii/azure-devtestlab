@@ -2,6 +2,9 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "resourceGroupName": {
+      "type": "string"
+    },
     "vnetName": {
       "type": "string"
     },
@@ -10,12 +13,12 @@
     }
   },
   "resources": [
-    
+
   ],
   "outputs": {
     "vnetId": {
       "type": "string",
-      "value": "[resourceId('Microsoft.Network/virtualNetworks', parameters('vnetName'))]"
+      "value": "[resourceId(parameters('resourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('vnetName'))]"
     }
   }
 }

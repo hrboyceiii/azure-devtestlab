@@ -4,6 +4,9 @@
   "parameters": {
     "storageAccountName": {
       "type": "string"
+    },
+    "resourceGroupName": {
+      "type": "string"
     }
   },
   "resources": [
@@ -12,7 +15,7 @@
   "outputs": {
     "vnetId": {
       "type": "string",
-      "value": "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]"
+      "value": "[resourceId(parameters('resourceGroupName'), 'Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]"
     }
   }
 }
